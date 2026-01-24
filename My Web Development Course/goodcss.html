@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple CSS Practice</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #161616, #131515);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: blue;
+      width: 90%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(232, 253, 5, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #f3f1f0;
+      color: #101010;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background: #2c80b4;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>WELCOME</h1>
+    <a href="#" class="btn">Watch More</a>
+  </div>
+
+</body>
+</html>

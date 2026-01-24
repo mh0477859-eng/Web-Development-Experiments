@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            margin-top: 20px;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .absolute {
+            background-color: #e74c3c;
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .relative {
+            background-color: #3498db;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            position: relative;
+        }
+
+        .sticky {
+            background-color: #f1c40f;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            position: relative;
+        }
+
+        .fixed {
+            background-color: #2ecc71;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            position: relative;
+        }
+
+        .filler {
+            height: 2000px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #333, #000);
+            color: #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box absolute">
+            This is Absolute
+        </div>
+
+        <div class="box relative">
+            This is Relative
+        </div>
+        
+        <div class="box sticky">
+            This is Sticky
+        </div>
+
+        <div class="box fixed">
+            This is Fixed
+        </div>
+
+        <!-- Filler content to allow scrolling -->
+        <div class="filler">
+           
+        </div>
+
+    </div>
+
+</body>
+</html>
