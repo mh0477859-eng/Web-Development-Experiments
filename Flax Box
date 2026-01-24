@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            height: 80vh;
+            width: 90vw;
+            display: flex;
+            gap: 5px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 2px solid black;
+        }
+        .container div{
+            background-color: brown;
+            height: 100px;
+            width: 150px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     .box3{
+            /* order: 3; */
+            flex: 1;
+        }
+        .box2{
+            flex: 1;
+        }
+        /* .container div:hover{
+            background-color: aqua;
+            color: black;
+            width: 200px;
+            height: 150px;
+            transition: 0.5s;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+    </div>
+</body>
+</html>
