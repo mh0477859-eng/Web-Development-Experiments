@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assalamualikum Style</title>
+  <style>
+    body {
+      background-color: #222;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hel {
+      font-size: 100px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: aquamarine;
+      border: 10px solid orange;
+      border-radius: 20px;
+      padding: 20px 40px;
+      display: inline-block;
+      text-transform: uppercase;
+      box-shadow: 0px 0px 30px orange;
+      transition: 0.5s;
+    }
+
+    /* Hover effect */
+    .hel:hover {
+      color: BLUE;
+      border-color: BLUE;
+      box-shadow: 0px 0px 50px BLUE;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="hel">WELCOME</h1>
+</body>
+</html>
