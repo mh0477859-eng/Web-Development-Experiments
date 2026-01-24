@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Night Sky</title>
+    <style>
+        /* Full-screen background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gradient night sky */
+        body {
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+        }
+
+        /* Stars */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {opacity: 0.2;}
+            to {opacity: 1;}
+        }
+
+        /* Moon */
+        .moon {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #fdfbd3 0%, #f0e68c 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px 10px #fdfbd3;
+        }
+
+        /* Shooting star */
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(white, transparent);
+            transform: rotate(-45deg);
+            animation: shoot 2s linear infinite;
+        }
+
+        @keyframes shoot {
+            from {top: -100px; left: 100%; opacity: 0;}
+            50% {opacity: 1;}
+            to {top: 100%; left: -100px; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="moon"></div>
+
+    <!-- Shooting star -->
+    <div class="shooting-star"></div>
+
+    <script>
+        // Generate stars dynamically
+        const starCount = 100;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 3 + 1; // 1px to 4px
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * window.innerHeight}px`;
+            star.style.left = `${Math.random() * window.innerWidth}px`;
+            star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
