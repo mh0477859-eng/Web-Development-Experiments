@@ -1,49 +1,69 @@
-Web Development Experiments
+# 🌐 Web Development Experiments
 
-Welcome to my GitHub repository! This is a collection of small web development experiments and HTML projects created to explore different concepts in frontend development.
+Welcome to my **Web Development Experiments** repository! 🚀
+This repo contains small projects and experiments created while learning and practicing **HTML, CSS, and JavaScript**.
 
-🔍 Overview
+---
 
-This repository contains the following HTML files:
+## 👨‍🎓 About Me
 
-Enhanced Price Calculator.html – A dynamic price calculator with enhanced features.
+I am a **student and passionate Web Developer**. I enjoy learning new web technologies and building responsive, interactive, and creative websites.
 
-Interactive-Balls.html – A fun experiment with interactive bouncing balls using JavaScript.
+---
 
-Modified Ball.html – A 3D spinning cube example using CSS and JavaScript.
+## 🛠️ Technologies Used
 
-Muhammad Hasan – My GitHub profile page.
+* **HTML5** – Structure of the web pages
+* **CSS3** – Styling and responsive design
+* **JavaScript** – Interactivity and logic
 
-cluser&currying.html – Demonstration of JavaScript concepts like closures and currying.
+---
 
-📁 Structure
+## 📁 Projects Included
 
-Each file is standalone and can be opened directly in a browser. No external dependencies are required.
+Here are some projects available in this repository:
 
-🚀 Purpose
+* **Enhanced Price Calculator**
+  A calculator project with improved logic and user interaction.
 
-These experiments are part of my learning journey in web development. I created them to:
+* **Interactive Balls**
+  A fun JavaScript-based animation project with moving interactive elements.
 
-Practice HTML, CSS, and JavaScript
+* **3D Spinning Cube / Ball Experiment**
+  A creative experiment using HTML, CSS, and JavaScript.
 
-Explore interactive UI elements
+* **Cursor & Currying Experiment**
+  JavaScript-based interaction and behavior testing.
 
-Understand core JavaScript concepts
+> More projects will be added as I continue learning and improving my skills.
 
-📌 How to Use
+---
 
-Clone the repository:
+## 🌍 Live Demo (Coming Soon)
 
-git clone https://github.com/mh0477859-eng/Web-Development-Experiments.git
+I will soon enable **GitHub Pages** to provide live demos of these projects.
 
-Open any .html file in your browser to see the experiment in action.
+---
 
-🙋 About Me
+## 🎯 Goals
 
-I'm Muhammad Hasan, a passionate learner and developer exploring the world of web technologies. Connect with me on GitHub to see more of my work!
+* Improve my JavaScript skills
+* Learn modern frameworks in the future
+* Become a **Professional Software Engineer**
 
-🌟 Contributions & Feedback
+---
 
-Feel free to fork this repo, suggest improvements, or share feedback. I'm always open to learning and collaboration.
+## 🤝 Contributing
 
-Thanks for visiting!
+Suggestions and feedback are always welcome!
+Feel free to **star ⭐ the repository** if you find it helpful.
+
+---
+
+## 📫 Contact
+
+GitHub Profile: **Muhammad Hasan**
+
+---
+
+⭐ *Thank you for visiting my repository! Keep learning and building.*
