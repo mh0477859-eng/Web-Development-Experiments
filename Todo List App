@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo 2026</title>
+    
+    <!-- CSS Section -->
+    <style>
+        :root {
+            --primary: #8d0bf8; /* Modern Purple */
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --accent: #10b981;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: rgb(245, 15, 7);
+            background-image: radial-gradient(circle at top right, #1d04ff, transparent);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .todo-card {
+            width: 90%;
+            max-width: 450px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(to right, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .input-box {
+            display: flex;
+            background: #0f172a;
+            padding: 5px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid #334155;
+        }
+
+        input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 15px;
+            color: white;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button#add-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button#add-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+
+        ul { list-style: none; }
+
+        li {
+            background: rgba(51, 65, 85, 0.4);
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+            border: 1px solid transparent;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        li:hover {
+            border-color: var(--primary);
+            background: rgba(51, 65, 85, 0.6);
+        }
+
+        .task-text {
+            flex: 1;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .completed .task-text {
+            text-decoration: line-through;
+            color: #64748b;
+        }
+
+        .delete-icon {
+            color: #f87171;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .delete-icon:hover {
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="todo-card">
+        <header>
+            <h2>Todo List App</h2>
+            <p style="font-size: 12px; color: #94a3b8;">Stay productive today</p>
+        </header>
+
+        <div class="input-box">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-btn">Add</button>
+        </div>
+
+        <ul id="todo-list">
+            <!-- Tasks yahan ayenge -->
+        </ul>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        const input = document.getElementById('todo-input');
+        const addBtn = document.getElementById('add-btn');
+        const todoList = document.getElementById('todo-list');
+
+        // Local storage se purana data nikalna
+        let tasks = JSON.parse(localStorage.getItem('tasks2026')) || [];
+
+        function saveAndRender() {
+            localStorage.setItem('tasks2026', JSON.stringify(tasks));
+            render();
+        }
+
+        function render() {
+            todoList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                if (task.completed) li.classList.add('completed');
+
+                li.innerHTML = `
+                    <span class="task-text" onclick="toggle(${index})">${task.text}</span>
+                    <span class="delete-icon" onclick="remove(${index})">✕</span>
+                `;
+                todoList.appendChild(li);
+            });
+        }
+
+        addBtn.addEventListener('click', () => {
+            if (input.value.trim()) {
+                tasks.push({ text: input.value, completed: false });
+                input.value = '';
+                saveAndRender();
+            }
+        });
+
+        // Enter key support
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') addBtn.click();
+        });
+
+        window.toggle = (index) => {
+            tasks[index].completed = !tasks[index].completed;
+            saveAndRender();
+        };
+
+        window.remove = (index) => {
+            tasks.splice(index, 1);
+            saveAndRender();
+        };
+
+        // Initial Load
+        render();
+    </script>
+</body>
+</html>
